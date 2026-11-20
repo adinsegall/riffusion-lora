@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riffusion LoRA — Audio Gallery</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+         max-width: 980px; margin: 0 auto; padding: 24px 16px 64px; line-height: 1.5;
+         background: #fafafa; color: #1c1c1c; }
+  @media (prefers-color-scheme: dark) { body { background: #111; color: #e6e6e6; }
+    section { background: #1b1b1b !important; } .prompt-text { background: #242424 !important; } }
+  header { text-align: center; margin-bottom: 32px; }
+  header h1 { margin-bottom: 4px; }
+  header p { color: #777; margin-top: 0; }
+  header a { color: inherit; }
+  section { background: #fff; border-radius: 10px; padding: 8px 20px 20px; margin-bottom: 28px;
+            box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+  h2 { border-bottom: 2px solid #6c8cd5; padding-bottom: 6px; }
+  .prompt { margin-bottom: 20px; }
+  .prompt-text { font-style: italic; background: #f1f3f7; border-left: 4px solid #6c8cd5;
+                 padding: 8px 12px; border-radius: 0 6px 6px 0; }
+  .players { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+  figure { margin: 0; }
+  figcaption { font-weight: 600; font-size: .9em; margin-bottom: 4px; }
+  figcaption.baseline { color: #c0392b; } figcaption.fine-tuned { color: #27ae60; }
+  figcaption.blend, figcaption[class*="blend"] { color: #d08a00; }
+  audio { width: 100%; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Riffusion LoRA — Audio Gallery</h1>
+  <p>Generated samples from the ablation study: baseline Riffusion vs. 50% latent blend vs. LoRA fine-tuned.<br>
+  <a href="https://github.com/adinsegall/riffusion-lora">← back to the repo</a></p>
+</header>
+    <section>
+      <h2>Drum Loops</h2>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;drum loop, techno style, 128 BPM, punchy kick and hi-hats, electronic&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/01-01-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/01-01-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/01-01-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;drum sound, trap style, 140 BPM, heavy 808 and snares, hip hop&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/01-02-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/01-02-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/01-02-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;percussion loop, dubstep style, 150 BPM, aggressive drums, electronic&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/01-03-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/01-03-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/01-03-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;drum pattern, house music, 126 BPM, four-on-floor kick, professional&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/01-04-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/01-04-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/01-04-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Melody Loops</h2>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;melodic sound, jazz style, 95 BPM, in key Eb minor, smooth chord progression&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/02-05-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/02-05-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/02-05-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;synth lead, future bass style, 150 BPM, bright harmonics, modulated&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/02-06-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/02-06-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/02-06-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;piano melody, lofi hip hop style, 85 BPM, in key A minor, vintage sound&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/02-07-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/02-07-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/02-07-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;string ensemble, cinematic style, 90 BPM, emotional dynamics, layered&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/02-08-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/02-08-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/02-08-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Bass Loops</h2>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;bass sound, bass house style, 128 BPM, deep sub bass, four-on-floor&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/03-09-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/03-09-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/03-09-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;bass loop, dubstep style, 150 BPM, heavy wobble bass, riddim&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/03-10-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/03-10-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/03-10-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;melodic bass, deep house style, 125 BPM, rolling bassline, warm&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/03-11-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/03-11-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/03-11-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;synth bass, techno style, 130 BPM, punchy and clean, electronic&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/03-12-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/03-12-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/03-12-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>One-Shots</h2>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;drum sound, techno style, single kick hit, punchy and clean&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/04-13-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/04-13-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/04-13-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;percussion hit, trap style, snare shot, bright and snappy&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/04-14-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/04-14-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/04-14-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;bass hit, dubstep style, sub drop impact, massive presence&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/04-15-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/04-15-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/04-15-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;synth stab, house music style, chord hit, punchy attack&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/04-16-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/04-16-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/04-16-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>FX &amp; Textures</h2>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;ambient pad, cinematic style, ethereal atmosphere, evolving texture&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/05-17-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/05-17-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/05-17-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;sound effect, electronic style, riser sweep, build up tension&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/05-18-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/05-18-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/05-18-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;background texture, lofi style, vinyl atmosphere, subtle noise&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/05-19-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/05-19-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/05-19-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+      <div class="prompt">
+        <p class="prompt-text">&ldquo;transition effect, dubstep style, whoosh sweep, downlifter&rdquo;</p>
+        <div class="players">
+        <figure><figcaption class="baseline">Baseline</figcaption><audio controls preload="none" src="audio/05-20-baseline.mp3"></audio></figure>
+        <figure><figcaption class="50-blend">50% Blend</figcaption><audio controls preload="none" src="audio/05-20-50-blend.mp3"></audio></figure>
+        <figure><figcaption class="fine-tuned">Fine-tuned</figcaption><audio controls preload="none" src="audio/05-20-fine-tuned.mp3"></audio></figure>
+        </div>
+      </div>
+    </section>
+</body>
+</html>
